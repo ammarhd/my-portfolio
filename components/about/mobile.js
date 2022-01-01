@@ -63,6 +63,7 @@ const AboutMobile = () => {
             transition={{
               damping: 5,
               mass: 1,
+
               delay: 0.2,
             }}
             initial="hidden"

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
-export const useHeaderVisible = () => {
+const useHeaderVisible = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -20,3 +20,5 @@ export const useHeaderVisible = () => {
 
   return visible;
 };
+
+export default useHeaderVisible;

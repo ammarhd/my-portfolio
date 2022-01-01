@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 import { AnimatePresence, motion } from "framer-motion";
 
 import clsx from "clsx";
-import { useHeaderVisible } from "./useHeaderVisible";
+import useHeaderVisible from "./useHeaderVisible";
 
 const Navbar = () => {
   const { systemTheme, theme, setTheme } = useTheme();
@@ -26,7 +26,6 @@ const Navbar = () => {
     const currentTheme = theme == "system" ? systemTheme : theme;
 
     if (currentTheme == "dark") {
-      //playOnDark();
       return (
         <HiSun
           className="w-6 h-6"
@@ -35,7 +34,6 @@ const Navbar = () => {
         ></HiSun>
       );
     } else {
-      //playOnLight();
       return (
         <HiMoon
           className="w-6 h-6"

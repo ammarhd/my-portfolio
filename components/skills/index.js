@@ -107,7 +107,7 @@ const Skills = () => {
           {skills.map((skill, i) => (
             <motion.a
               key={i}
-              className="flex flex-col justify-center items-center pt-3 pb-2 text-center px-auto dark:bg-gray-900 rounded-md bg-whiteTheme"
+              className="flex flex-col justify-center items-center pt-3 pb-2 text-center px-auto dark:bg-gray-900 dark:bg-opacity-60 rounded-md bg-whiteTheme"
               style={{
                 boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.10)",
               }}

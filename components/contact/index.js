@@ -1,7 +1,6 @@
 import { useAnimation, motion } from "framer-motion";
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { RiContactsFill } from "react-icons/ri";
 import { TiContacts } from "react-icons/ti";
 
 const Contact = () => {

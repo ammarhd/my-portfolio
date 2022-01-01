@@ -26,10 +26,10 @@ const Review = () => {
         }}
         animate={controls}
       >
-        <div className="flex flex-col rounded-lg bg-white-900 dark:bg-black-900 p-5  shadow-lg my-20  ">
+        <div className="flex flex-col rounded-lg bg-white-700 dark:bg-black-900 p-5  shadow-lg my-20 bg-opacity-30  ">
           <div
             id="review"
-            className="pb-3 dark:text-white-700 text-black-700   "
+            className="pb-3 dark:text-white-700 text-black-700 opacity-70  "
           >
             We employed Ammar for a short project re. an web implementation of
             our tools for FADO. Ammar delivered meticulously, and helped
@@ -38,7 +38,7 @@ const Review = () => {
           </div>
           <div id="info" className="flex justify-start items-center space-x-3 ">
             <img
-              class="w-12 h-12 rounded-full "
+              className="w-12 h-12 rounded-full "
               src="/images/kristiaan.png"
               alt=""
               width="384"
