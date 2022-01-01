@@ -29,7 +29,7 @@ const About = () => {
               Ammar Aldhahyani
             </div>
             <div id="sub" className="font-semibold">
-              Hello, I'm a full-stack developer based in Sweden!
+              Hello, I&apos;m a full-stack developer based in Sweden!
             </div>
             <div
               id="discription"

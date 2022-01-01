@@ -26,7 +26,7 @@ const AboutMobile = () => {
           Ammar Aldhahyani
         </div>
         <div id="sub" className="font-semibold">
-          Hello, I'm a full-stack developer based in Sweden!
+          Hello, I&apos;m a full-stack developer based in Sweden!
         </div>
         <div
           id="discription"
@@ -63,7 +63,6 @@ const AboutMobile = () => {
             transition={{
               damping: 5,
               mass: 1,
-
               delay: 0.2,
             }}
             initial="hidden"

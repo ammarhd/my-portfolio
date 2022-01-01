@@ -1,6 +1,7 @@
 import { useAnimation, motion } from "framer-motion";
 import React, { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import Image from "next/image";
 
 const Review = () => {
   const controls = useAnimation();
@@ -37,12 +38,12 @@ const Review = () => {
             example of how a well executed software project should look like.
           </div>
           <div id="info" className="flex justify-start items-center space-x-3 ">
-            <img
-              className="w-12 h-12 rounded-full "
+            <Image
+              className="rounded-full "
               src="/images/kristiaan.png"
               alt=""
-              width="384"
-              height="512"
+              width="45"
+              height="45"
             />
 
             <div className="flex flex-col justify-center">

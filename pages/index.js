@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import About from "../components/about";
 import Projects from "../components/work";
 import Layout from "../components/layouts/article";

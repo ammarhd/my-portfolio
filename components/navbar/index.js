@@ -66,7 +66,11 @@ const Navbar = () => {
             className="flex justify-end items-center space-x-5"
           >
             <div id="github">
-              <a href="https://github.com/ammarhd" target="_blank">
+              <a
+                href="https://github.com/ammarhd"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <div className="flex justify-start items-center space-x-1 font-semibold">
                   <IoLogoGithub />
                   <span>Source</span>
