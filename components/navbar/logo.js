@@ -16,7 +16,7 @@ const Logo = () => {
     <Link href="/">
       <a>
         <LogoBox>
-          <div className="text-gray-800 dark:text-gray-200 font-bold font-sans ml-3">
+          <div className="text-gray-800 dark:text-gray-200 font-bold font-fugaz  ml-3">
             Ammar ALdhahyani
           </div>
         </LogoBox>
