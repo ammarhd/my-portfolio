@@ -1,37 +1,34 @@
 import "../styles/globals.css";
 import Layout from "../components/layouts/main";
-import Script from "next/script";
+
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 
-function Website({ Component, pageProps, router }) {
-  return (
-    <>
-      {/* Global Site Tag (gtag.js) - Google Analytics */}
-      <Script
-        id="script1"
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import * as ga from "../lib/analytics";
 
-      <Script id="script2" strategy="lazyOnload">
-        {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}, {
-              page_path: window.location.pathname,
-            });
-                `}
-      </Script>
-      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-        <Layout router={router}>
-          <AnimatePresence exitBeforeEnter initial={true}>
-            <Component {...pageProps} key={router.route} />
-          </AnimatePresence>
-        </Layout>
-      </ThemeProvider>
-    </>
+function Website({ Component, pageProps, router }) {
+  const router2 = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      ga.pageview(url);
+    };
+    router2.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router2.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router2.events]);
+
+  return (
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+      <Layout router={router}>
+        <AnimatePresence exitBeforeEnter initial={true}>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
+      </Layout>
+    </ThemeProvider>
   );
 }
 
