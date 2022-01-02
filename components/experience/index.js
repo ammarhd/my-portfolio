@@ -26,12 +26,12 @@ const Experience = () => {
       date: "May 2021 - Aug 2021",
     },
     {
-      title: "Computer Science",
+      title: "Bachelor in Computer Science",
       place: "Sabanci & Uppsala university",
       date: "Aug 2016 - June 2020",
     },
     {
-      title: "Computer Science",
+      title: "Master in Computer Science",
       place: "Uppsala university",
       date: "Aug 2020 - June 2022",
     },
@@ -46,7 +46,7 @@ const Experience = () => {
   }, [controls, inView]);
 
   return (
-    <div className="w-full  mx-auto mt-10 md:mt-32  max-w-screen-md">
+    <div className="w-full  mx-auto mt-20 md:mt-32  max-w-screen-md">
       <div className="mt-14 ">
         <div id="section" className="pb-14 flex flex-col space-y-4">
           <div

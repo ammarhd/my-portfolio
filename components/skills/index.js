@@ -85,7 +85,7 @@ const Skills = () => {
   }, [controls, inView]);
 
   return (
-    <div className="w-full  mx-auto mt-10 md:mt-20  max-w-screen-md">
+    <div className="w-full  mx-auto mt-14 md:mt-20  max-w-screen-md">
       <div id="section" className="pb-5 flex flex-col space-y-4">
         <div
           id="title"

@@ -16,7 +16,7 @@ const Contact = () => {
     }
   }, [controls, inView]);
   return (
-    <div className="w-full  mx-auto mt-10 md:mt-28   max-w-screen-md" ref={ref}>
+    <div className="w-full  mx-auto mt-20 md:mt-28   max-w-screen-md" ref={ref}>
       <motion.div
         className="relative flex items-center"
         initial="initial"

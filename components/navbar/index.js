@@ -63,7 +63,7 @@ const Navbar = () => {
 
           <div
             id="rightSide"
-            className="flex justify-end items-center space-x-5"
+            className="flex justify-end items-center space-x-4 md:space-x-5 pr-2 lg:pr-0"
           >
             <div id="github">
               <a
