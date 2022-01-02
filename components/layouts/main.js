@@ -13,6 +13,7 @@ const Main = ({ children, router }) => {
         <meta property="og:site_name" content="Ammar Aldhahyani's Homepage" />
         <meta property="og:type" content="website" />
         <title>Ammar Aldhahyani - Homepage</title>
+        <link rel="icon" href="/icon.jpg"></link>
       </Head>
 
       <Navbar path={router.asPath} />

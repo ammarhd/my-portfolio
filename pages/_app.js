@@ -10,11 +10,11 @@ function Website({ Component, pageProps, router }) {
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         id="script1"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
 
-      <Script id="script2" strategy="afterInteractive">
+      <Script id="script2" strategy="lazyOnload">
         {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

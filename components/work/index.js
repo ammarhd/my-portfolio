@@ -25,7 +25,7 @@ const Projects = () => {
       description:
         "A one-page portfolio website that shows some of my projects, skills, and experience. ",
       technologies: ["Next", "Tailwind", "Framer-motion"],
-      externalLink: "",
+      externalLink: "https://ammarhd.com",
       githubLink: "https://github.com/ammarhd/my-portfolio",
       imageLink: "/images/portfolio.png",
     },
