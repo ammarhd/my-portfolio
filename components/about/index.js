@@ -24,7 +24,10 @@ const About = () => {
           id="about"
           className=" w-full  flex justify-between items-start sm:px-5 "
         >
-          <div id="aboutText" className=" flex flex-col pt-5  space-y-3 ">
+          <div
+            id="aboutText"
+            className="md:w-2/3 flex flex-col pt-5  space-y-3 "
+          >
             <div id="name" className="font-bold text-2xl">
               Ammar Aldhahyani
             </div>
