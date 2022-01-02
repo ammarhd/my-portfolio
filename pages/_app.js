@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import Layout from "../components/layouts/main";
-
+import Script from "next/script";
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 
