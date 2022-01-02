@@ -27,7 +27,7 @@ const Review = () => {
         }}
         animate={controls}
       >
-        <div className="flex flex-col rounded-lg bg-white-700 dark:bg-white-900 p-5  shadow-lg my-10 bg-opacity-30  ">
+        <div className="flex flex-col rounded-lg bg-white-700 dark:bg-black-900 p-5  shadow-lg my-10 bg-opacity-30  ">
           <div
             id="review"
             className="pb-3 dark:text-white-700 text-black-700 opacity-70  "
