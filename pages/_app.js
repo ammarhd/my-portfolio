@@ -1,34 +1,37 @@
 import "../styles/globals.css";
 import Layout from "../components/layouts/main";
-
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "next-themes";
-
-import { useRouter } from "next/router";
-import { useEffect } from "react";
-import * as ga from "../lib/analytics";
+import Script from "next/script";
 
 function Website({ Component, pageProps, router }) {
-  const router2 = useRouter();
-
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      ga.pageview(url);
-    };
-    router2.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router2.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router2.events]);
-
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-      <Layout router={router}>
-        <AnimatePresence exitBeforeEnter initial={true}>
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
-      </Layout>
-    </ThemeProvider>
+    <>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <Script
+        id="script1"
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+
+      <Script id="script2" strategy="afterInteractive">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+                `}
+      </Script>
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+        <Layout router={router}>
+          <AnimatePresence exitBeforeEnter initial={true}>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </Layout>
+      </ThemeProvider>
+    </>
   );
 }
 
