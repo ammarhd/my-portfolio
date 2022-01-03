@@ -13,7 +13,7 @@ const Projects = () => {
       title: "FaDO",
       subtitle: "ML-driven tool for fraud detection",
       description:
-        "FaDO is an algorithmic solution for monitoring financial transactions. It has tons of features, accepts an encrypted transactions file and then process, read, visualize and calculate the APIs ...",
+        "FaDO is an algorithmic solution for monitoring financial transactions. It has tons of features, accepts an encrypted transactions file and then process, read, visualize and calculate the KPIs ...",
       technologies: ["React", "Node.js", "Redux", "Websocket"],
       externalLink: "https://demo.fado.life",
       githubLink: "https://github.com/ammarhd/FaDO-React",
