@@ -55,7 +55,7 @@ const Navbar = () => {
       >
         <div
           id="content"
-          className="mx-auto max-w-screen-md  px-1 md:px-0 py-5 font-sans flex justify-between items-center text-black-900 dark:text-white-900 "
+          className="mx-auto max-w-screen-md  px-1 md:px-0 py-5  flex justify-between items-center text-black-900 dark:text-white-900 "
         >
           <div id="name" className="flex justify-start">
             <Logo />
@@ -71,7 +71,7 @@ const Navbar = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <div className="flex justify-start items-center space-x-1 font-semibold">
+                <div className="flex justify-start items-center space-x-1 ">
                   <IoLogoGithub />
                   <span>Source</span>
                 </div>
